@@ -1,12 +1,12 @@
 
 public abstract class FiguraGeometrica {
     String cor;
-    static int id;
+    int id = 1;
     static int totalFiguras = 0;
 
     public FiguraGeometrica(String cor) {
         this.cor = cor;
-        FiguraGeometrica.id = id++;
+        this.id += totalFiguras;
         FiguraGeometrica.totalFiguras++;
     }
 
